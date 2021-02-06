@@ -2,7 +2,6 @@ import { AdminService } from "./../../services/admin.service";
 import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 
-
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
@@ -14,7 +13,7 @@ export class SignupComponent implements OnInit {
     username: null,
     password: null,
     role_id: null,
-    captcha:null,
+    captcha:null
   };
 
 
@@ -24,7 +23,7 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private adminService: AdminService,
+    private adminService: AdminService
   ) {}
 
   ngOnInit() {
@@ -49,15 +48,10 @@ export class SignupComponent implements OnInit {
     this.success = succ.message;
   }
 
-
-  
   resolved(captchaResponse: string) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
-  }
+    this.form.captcha = captchaResponse;
 
-  errored() {
-    console.warn(`reCAPTCHA error encountered`);
+    console.log(`${captchaResponse}`);
   }
-
 
 }
