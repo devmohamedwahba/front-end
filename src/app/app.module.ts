@@ -18,8 +18,10 @@ import { ChartsModule } from 'ng2-charts';
 import { ChartComponent } from './components/chart/chart.component';
 
 import {  ThemeService } from 'ng2-charts';
+import { RecaptchaModule } from "ng-recaptcha";
 
-import { BotDetectCaptchaModule } from 'angular-captcha'; 
+
+
 
 
 
@@ -46,11 +48,7 @@ import { BotDetectCaptchaModule } from 'angular-captcha';
     FormsModule,
     HttpClientModule,
     ChartsModule,
-    BotDetectCaptchaModule
-
-    
-
-
+    RecaptchaModule,
 
   ],
   providers: [
