@@ -1,0 +1,23 @@
+<ul class="list-unstyled components m-4">
+ 
+
+  <li *ngIf="userRole === 'doctor' "  class="p-2">
+    <a
+      [routerLink]="['/admin/blood/']"
+      [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><span class="fa fa-trophy"></span> Insert Blood</a
+    >
+  </li>
+
+  <li *ngIf="userRole === 'doctor' "  class="p-2">
+    <a
+      [routerLink]="['/admin/chart/']"
+      [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><span class="fa fa-trophy"></span> Visualize Data</a
+    >
+  </li>
+  
+
+</ul>

@@ -1,0 +1,18 @@
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: -webkit-fill-available;
+  max-width: fit-content;
+}
+
+.act {
+  color: green;
+  text-align: center;
+  font-size: large;
+}
+
+.inact {
+  color: red;
+  text-align: center;
+  font-size: large;
+}

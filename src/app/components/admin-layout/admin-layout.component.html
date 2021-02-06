@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/nav-bar/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  </head>
+
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar" [ngClass]="{ active: toggleClass }">
+        <div class="custom-menu">
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="btn btn-primary"
+            (click)="onActiveSideBar()"
+          ></button>
+        </div>
+        <div
+          class="img bg-wrap text-center py-4"
+          style="background-image: url(assets/nav-bar/images/bg_1.jpg);"
+        >
+          <div class="user-logo">
+            <div
+              class="img"
+              style="background-image: url(assets/nav-bar/images/logo.jpg);"
+            ></div>
+            <h3>{{ userRole }}</h3>
+          </div>
+        </div>
+
+        <app-side-bar></app-side-bar>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-1 p-md-3 pt-5">
+        <div class="content container-fluid">
+          <div class="col-12 d-flex justify-content-between">
+            <img
+              src="assets/img/1200px-Saudi_Ministry_of_Health_Logo.svg.png"
+              class="logo img-responsive ml-5"
+            />
+            <img
+              src="assets/img/pattern.png"
+              class="pattern img-responsive w-75"
+            />
+          </div>
+          <div>
+            <div class="row">
+              <div
+                class="card"
+                style="width: 18rem; background-color: lightgreen;"
+                *ngIf="url"
+              >
+                <div *ngIf="userRole === 'doctor' " class="card-body" >
+                  <h5 class="card-title">Home</h5>
+                  <p class="card-text">
+                    
+                  
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</html>
